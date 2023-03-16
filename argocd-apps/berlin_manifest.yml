@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: berlin
-  namespace: argocd
+  namespace: portfolioapp
   labels:
     app: berlin
 spec:
@@ -27,7 +27,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: berlin-service
-  namespace: argocd
+  namespace: portfolioapp
 
 spec:
   selector:
@@ -36,4 +36,4 @@ spec:
   - name: http
     port: 80
     targetPort: 80
-  type: loadbalancer
+  type: LoadBalancer
