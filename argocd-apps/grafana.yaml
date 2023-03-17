@@ -13,13 +13,13 @@ spec:
   sources:
   - repoURL: https://github.com/RashRAJ/Alt_exam.git
     targetRevision: HEAD
-    ref: rajRepo
+    ref: RashRAJRepo
   - repoURL: https://grafana.github.io/helm-charts
     chart: grafana
     targetRevision: 6.52.2
     helm:
       valueFiles:
-        - $rajRepo/argocd_apps/values/grafana.yaml         
+        - $RashRAJRepo/argocd_apps/values/grafana.yaml         
   syncPolicy:
     automated:
       prune: true
