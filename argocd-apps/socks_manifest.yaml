@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: sock-shop-apps
-  namespace: socksapp
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
