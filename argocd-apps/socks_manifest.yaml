@@ -7,7 +7,7 @@ metadata:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sock-shop-app
+    namespace: sock-shop
     server: https://kubernetes.default.svc
   project: default
   sources:
