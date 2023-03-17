@@ -19,7 +19,7 @@ spec:
       targetRevision: 19.7.2
       helm:
         valueFiles:
-          - $RashRAJRepo/argocd-apps/values/prometheus.yaml
+          - $RashRAJrepo/argocd-apps/values/prometheus.yaml
   syncPolicy:
     automated:
       prune: true
