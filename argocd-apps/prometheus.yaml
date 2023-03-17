@@ -27,4 +27,4 @@ spec:
     syncOptions:
       - CreateNamespace=true
   
-  progressDeadlineSeconds: 600
+  #progressDeadlineSeconds: 600
