@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sock-shop-apps
+  namespace: socksapp
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: sock-shop-app
+    server: https://kubernetes.default.svc
+  project: default
+  sources:
+  - repoURL: https://github.com/RashRAJ/Alt_exams.git
+    targetRevision: main
+    path: argocd_apps_2    
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
