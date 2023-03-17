@@ -13,13 +13,13 @@ spec:
   sources:
     - repoURL: https://github.com/RashRAJ/Alt_exams.git
       targetRevision: HEAD
-      ref: rajrepo
+      ref: RashRAJrepo
     - repoURL: https://prometheus-community.github.io/helm-charts/
       chart: prometheus
       targetRevision: 19.7.2
       helm:
         valueFiles:
-          - $rajRepo/argocd-apps/values/prometheus.yaml
+          - $RashRAJRepo/argocd-apps/values/prometheus.yaml
   syncPolicy:
     automated:
       prune: true
