@@ -50,9 +50,8 @@ spec:
                   number: 8080
   tls:
     - hosts:
-        - project.octoarts.me
         - prometheus.octoarts.me
         - grafana.octoarts.me
         - socksapp.octoarts.me
         - berlin.octoarts.me
-      secretName: apps-odeybright
+      secretName: apps-rashraj
