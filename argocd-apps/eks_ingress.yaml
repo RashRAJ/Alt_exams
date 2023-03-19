@@ -45,9 +45,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: exam-service
+                name: berlin-service
                 port:
-                  number: 80
+                  number: 8080
   tls:
     - hosts:
         - project.octoarts.me
