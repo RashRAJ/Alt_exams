@@ -5,27 +5,54 @@ metadata:
   namespace: argocd
   annotations:
     kubernetes.io/ingress.class: nginx
-#     cert-manager.io/cluster-issuer: letsencrypt-production
+    cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
-  tls:
-    - hosts:
-        - eks.octoarts.me
-      secretName: eks-octoarts-tls
   rules:
-    - host: eks.octoarts.me
+    - host: prometheus.octoarts.me
       http:
         paths:
-          - path: /prometheus
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: prometheus-server
                 port:
                   name: http
-          - path: /grafana
+    - host: grafana.octoarts.me
+      http:
+        paths:
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: grafana
                 port:
+                  name: service
+    - host: socksapp.octoarts.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: front-end
+                port:
+                  name: http
+    - host: berlin.octoarts.me
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: exam-service
+                port:
                   number: 80
+  tls:
+    - hosts:
+        - project.octoarts.me
+        - prometheus.octoarts.me
+        - grafana.octoarts.me
+        - socksapp.octoarts.me
+        - berlin.octoarts.me
+      secretName: apps-odeybright
