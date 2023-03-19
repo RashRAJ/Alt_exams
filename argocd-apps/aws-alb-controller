@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: alb-controller
+  name: aws-alb-controller
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -11,7 +11,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   sources:
-  - repoURL: git@github.com:RashRAJ/Alt_exams.git
+  - repoURL: https://github.com/RashRAJ/Alt_exams.git
     targetRevision: HEAD
     ref: rashrajRepo
   - repoURL: https://aws.github.io/eks-charts
