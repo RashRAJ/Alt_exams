@@ -27,7 +27,7 @@
 
 Update your Kubeconfig file by running the following command `aws eks update-kubeconfig --name <clustername> --region <cluster region>` 
 
-`run kubctle get nodes` to confirm everything is okay
+`run kubctl get nodes` to confirm everything is okay
 
 ## Setting up Argocd CI/CD
 ![argocd](https://user-images.githubusercontent.com/56790407/226378394-80f7d4d9-cbef-475f-9031-7db913ea265b.png)
