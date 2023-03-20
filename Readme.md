@@ -29,7 +29,8 @@ Update your Kubeconfig file by running the following command `aws eks update-kub
 
 `run kubctle get nodes` to confirm everything is okay
 
-## Setting up Argocd
+## Setting up Argocd CI/CD
+![argocd](https://user-images.githubusercontent.com/56790407/226378394-80f7d4d9-cbef-475f-9031-7db913ea265b.png)
 
 - When your cluster is created uncomment the helm.tf file and run `teraform apply` to install the argo cd app in your cluster
 
@@ -39,10 +40,24 @@ tap on the url and sign in username: `admin` and use the password generated
 - Create a base app and connect argocd to the argocd apps folder on the github repository
 - Place your flask app deployment manifest in the argocd folder
 - Use kustomize to convert te socks app docker compose file to a manifest.
-- Install prometheus and grafana by placing the manifest files on the argocd apps folder forautomatc deployment
-- Get your grafana password using this command `kubectl get secret --namespace argocd grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo`
+- you can access my argocd at www.argocd.octoarts.me
 
-- Set up your ingress controller
+## Monitoring
+
+![grafana dashboard](https://user-images.githubusercontent.com/56790407/226373639-14bdebd2-f549-40fa-b655-7b6bbfd37fdb.png)
+
+
+- Install prometheus and grafana by placing the manifest files in the argocd apps folder for automatic deployment
+- Get your grafana password and url using this command `kubectl get secret --namespace argocd grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo`
+- you can Access my grafana dashboad at www.grafana.octoarts.me 
+
+# Links
+
+- Set up your ingress controller and access all apps via the link bellow
+- www.berlin.octorats.me       (portfolio app)
+- www.grafana.octoarts.me      (Grafana Dashboard)
+- www.prometheus.octoarts.me   (Prometheus)
+- www.socksapp.octoarts.me     (Socks app)
 
 
 
