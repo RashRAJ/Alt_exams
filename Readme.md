@@ -51,13 +51,24 @@ tap on the url and sign in username: `admin` and use the password generated
 - Get your grafana password and url using this command `kubectl get secret --namespace argocd grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo`
 - you can Access my grafana dashboad at www.grafana.octoarts.me 
 
+ 
+
 # Links
 
 - Set up your ingress controller and access all apps via the link bellow
+
+## portfolio app
 - www.berlin.octorats.me       (portfolio app)
+![image](https://user-images.githubusercontent.com/56790407/227743876-dbd8af3f-478b-4af0-afc1-25d8e59bd208.png)
 - www.grafana.octoarts.me      (Grafana Dashboard)
+
+## prometheus 
 - www.prometheus.octoarts.me   (Prometheus)
+
+## Socks app
 - www.socksapp.octoarts.me     (Socks app)
+![image](https://user-images.githubusercontent.com/56790407/227743449-1b121194-3f31-4f9b-900a-3f561af5535a.png)
+
 
 
 
